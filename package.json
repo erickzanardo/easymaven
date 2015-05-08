@@ -1,0 +1,27 @@
+{
+  "name": "easymaven",
+  "version": "1.0.0",
+  "description": "Cli tool to simplify the dependency adding for maven projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erickzanardo/easymaven"
+  },
+  "bin": {
+    "ignorer": "./cli.js"
+  },
+  "keywords": [
+    "maven",
+    "dependency"
+  ],
+  "author": "Erick Zanardo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/erickzanardo/easymaven/issues"
+  },
+  "homepage": "https://github.com/erickzanardo/easymaven",
+  "dependencies": {
+    "cheerio": "^0.19.0",
+    "request": "^2.55.0"
+  }
+}
