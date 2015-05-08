@@ -50,10 +50,10 @@ module.exports = function(pomPath, artifact) {
               console.log('Adding dependency to pom');
               var dependency = [
                 '     <dependency>',
-                '         <groupId>', groupId, '</groupId>',
-                '         <artifactId>', artifactId, '</artifactId>',
-                '         <version>', version, '</version>',
-                '     </dependency>\n\r'
+                '         <groupId>' + groupId + '</groupId>',
+                '         <artifactId>' + artifactId + '</artifactId>',
+                '         <version>' + version + '</version>',
+                '     </dependency>'
               ].join('\n');
               dependencies.append(dependency);
             }

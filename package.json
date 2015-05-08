@@ -8,7 +8,7 @@
     "url": "https://github.com/erickzanardo/easymaven"
   },
   "bin": {
-    "ignorer": "./cli.js"
+    "easymaven": "./cli.js"
   },
   "keywords": [
     "maven",
