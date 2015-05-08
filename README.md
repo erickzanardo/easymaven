@@ -5,7 +5,7 @@ Cli tool to simplify the dependency adding for maven projects
 ## Install it
 
 ```
-npm install easymaven --save
+npm install easymaven -g
 ```
 
 ## Use it
