@@ -11,13 +11,19 @@ var pomPath = [cwd, 'pom.xml'].join('/');
 if(args.length != 3) {
   console.log('Wrong usage, you must inform the artifact, example "easymaven gson"');
 } else {
-  fs.exists(pomPath, function(exists) {
-   if(exists) {
-     var artifact = args[2]
-     easymaven(pomPath, artifact);
-   } else {
-     console.log('This is not a maven project');
-   }
+  fs.open(pomPath, "r+", function(error) {
+    if(!error) {
+      var artifact = args[2];
+      easymaven(pomPath, artifact);
+    } else {
+      switch(error.code) {
+        case "EACCES":
+          console.error("Can't open", pomPath);
+          break;
+        default:
+          console.error('This is not a Maven project')
+      }
+    }
   });
 }
 
