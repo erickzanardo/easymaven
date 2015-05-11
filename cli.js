@@ -11,7 +11,7 @@ var pomPath = [cwd, 'pom.xml'].join('/');
 if(args.length != 3) {
   console.log('Wrong usage, you must inform the artifact, example "easymaven gson"');
 } else {
-  fs.open(pomPath, "rw", function(error) {
+  fs.open(pomPath, "r+", function(error) {
     if(!error) {
       var artifact = args[2];
       easymaven(pomPath, artifact);
